@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>LOTR quotes</h1>
+  <LOTRQuotes></LOTRQuotes>
+  <img src="{{ wordcloudService.response }}" />
+  <WordcloudService></WordcloudService>
+
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import LOTRQuotes from './components/LOTRQuotes.vue'
+import WordcloudService from './services/WordcloudService.js'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+   
+    LOTRQuotes,
+    WordcloudService
   }
 }
 </script>
