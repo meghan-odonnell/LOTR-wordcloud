@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 const options = {
   method: 'POST',
   url: 'https://textvis-word-cloud-v1.p.rapidapi.com/v1/textToCloud',
