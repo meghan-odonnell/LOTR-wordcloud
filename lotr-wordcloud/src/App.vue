@@ -1,6 +1,7 @@
 <template>
   <h1>LOTR quotes</h1>
   <LOTRQuotes></LOTRQuotes>
+  <Wordcloud></Wordcloud>
 
 
   
@@ -9,12 +10,13 @@
 <script>
 
 import LOTRQuotes from './components/LOTRQuotes.vue'
+import Wordcloud  from './components/Wordcloud.vue'
 
 export default {
   name: 'App',
   components: {
-   
-    LOTRQuotes
+    LOTRQuotes,
+    Wordcloud
   }
 }
 </script>
