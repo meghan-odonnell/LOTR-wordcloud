@@ -5,7 +5,7 @@
   </template>
   
   <script>
- import { generateWordcloud } from '@/services/WordcloudService';
+ import WordcloudService from '@/services/WordcloudService';
 
   
   export default {
@@ -16,19 +16,9 @@
       };
     },
     created() {
-      this.generateWordcloud();
-    },
-    methods: {
-      async generateWordcloud() {
-        const text = 'This is a test. I repeat, this is a test. We are only testing the functionality of this API, nothing else. End of test.';
-  
-        try {
-          const imageData = await generateWordcloud(text);
-          this.base64Image = 'data:image/png;base64,' + imageData;
-        } catch (error) {
-          console.error(error);
-        }
-      },
+      WordcloudService.generateWordcloud().then( (response) => {
+        this.base64Image = response.data;
+      });
     },
   };
   </script>
