@@ -9,7 +9,7 @@
 <script>
 // import LOTRQuotes from './components/LOTRQuotes.vue';
 import WordcloudComponent from './components/Wordcloud.vue';
-
+   
 
 export default {
   name: 'App',

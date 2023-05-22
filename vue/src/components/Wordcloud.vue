@@ -1,6 +1,7 @@
 <template>
     <div>
-      <img :src="base64Image" alt="Word Cloud" />
+      <img v-bind:src="{{base64Image}}" alt="Word Cloud" />
+      
     </div>
   </template>
   
