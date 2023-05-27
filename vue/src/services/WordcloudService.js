@@ -28,15 +28,10 @@ const options = {
 };
 
 export default {
-    async generateWordcloud() {
-        try {
-            const response = await axios.request(options);
-            console.log(response.data)
-            return response.data;
-            
-        } catch (error) {
-            console.error(error);
-            throw new Error('Failed to generate word cloud');
-        }
+    async generateWordcloud(text) {
+        this.text = text;
+       return axios.request(options);
+
     }
 }
+
