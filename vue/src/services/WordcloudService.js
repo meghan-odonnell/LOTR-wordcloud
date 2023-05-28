@@ -10,7 +10,7 @@ const options = {
         'X-RapidAPI-Host': 'textvis-word-cloud-v1.p.rapidapi.com'
     },
     data: {
-        text: 'This is a test. I repeat, this is a test. We are only testing the functionality of this api, nothing else. End of test.',
+        text: '',
         scale: 0.5,
         width: 400,
         height: 400,
@@ -29,7 +29,7 @@ const options = {
 
 export default {
     async generateWordcloud(text) {
-        this.text = text;
+        options.data.text = text;
        return axios.request(options);
 
     }
