@@ -25,7 +25,14 @@ export default new Vuex.Store({
     token: currentToken || '',
     user: currentUser || {},
     
-    quotes: {},
+    quotes: {
+            _id: '',
+            dialog: '',
+            movie: '',
+            character: '',
+            id: ''
+  
+    },
 
   },
   mutations: {

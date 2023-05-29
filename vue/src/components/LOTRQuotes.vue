@@ -5,34 +5,51 @@
                 <tr>
                     <th>Quote</th>
                 </tr>
-                <!-- <tr v-for="item in quotes" v-bind:key="item._id" >
+                <tr v-for="item in quotes" v-bind:key="item._id">
                     <td>{{ item.dialog }}</td>
-                </tr> -->
+                </tr>
             </tbody>
         </table>
-    <!-- <p>{{$store.state.quotes}}</p> -->
+      
     </div>
-  </template>
+</template>
   
-  <script>
-  
-  
-//   import LOTRService from '../services/LOTRService.js'
+<script>
 
+
+import LOTRService from '../services/LOTRService.js'
+
+
+export default {
+
+    name: 'lotr-quotes',
+    data() {
+        return {
+            quotes: {
+                _id: '',
+                dialog: '',
+                movie: '',
+                character: '',
+                id: ''
+
+            },
+        }
+    },
+    async created() {
+        try {
+        const response = await LOTRService.getQuotes()
+          //  .then(response => {
+                this.quotes = response.data;
+                //this.$store.commit('SET_LOTR_QUOTES', response.data);
+            }
+            catch(error){
+                console.error('Error occurred', error);
+            }
+
+
+    }
+
+}
+</script>
   
-  export default {
-      
-      name: 'lotr-quotes',
-      
-    //   created() {
-    //     LOTRService.getQuotes().then(response => {
-    //           this.$store.commit('SET_LOTR_QUOTES',response.data)
-    //       })
-    //   }
-  
-  }
-  </script>
-  
-  <style>
-  
-  </style>
+<style></style>

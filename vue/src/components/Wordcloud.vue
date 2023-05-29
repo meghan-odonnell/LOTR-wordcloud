@@ -1,6 +1,6 @@
 <template>
     <div>
-      <img :src="base64Image" alt="Word Cloud2" />
+      <img :src="base64Image" alt="Word Cloud Image Goes Here" />
     </div>
   </template>
   
