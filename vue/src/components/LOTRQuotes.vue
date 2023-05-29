@@ -40,6 +40,7 @@ export default {
         const response = await LOTRService.getQuotes()
           //  .then(response => {
                 this.quotes = response.data;
+                console.log("Returning data")
                 //this.$store.commit('SET_LOTR_QUOTES', response.data);
             }
             catch(error){
