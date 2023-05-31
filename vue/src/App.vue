@@ -2,20 +2,21 @@
   <div id="app">
     <h1>LOTR quotes</h1>
     <LOTRQuotes></LOTRQuotes>
-    <WordcloudComponent></WordcloudComponent>
+
+    <!-- <WordcloudComponent></WordcloudComponent> -->
   </div>
 </template>
 
 <script>
 import LOTRQuotes from './components/LOTRQuotes.vue';
-import WordcloudComponent from './components/Wordcloud.vue';
+//import WordcloudComponent from './components/Wordcloud.vue';
    
 
 export default {
   name: 'App',
   components: {
     LOTRQuotes,
-    WordcloudComponent,
+   // WordcloudComponent,
   },
 }
 </script>
