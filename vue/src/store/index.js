@@ -24,21 +24,15 @@ export default new Vuex.Store({
   state: {
     token: currentToken || '',
     user: currentUser || {},
+      quotes: [],
+      characters: [],
+      movies: []
     
-    quotes: {
-            _id: '',
-            dialog: '',
-            movie: '',
-            character: '',
-            id: ''
-  
-    },
+    
 
   },
   mutations: {
-    SET_LOTR_QUOTES(state,quote){
-      state.quotes = quote;
-    },
+    
     SET_AUTH_TOKEN(state, token) {
       state.token = token;
       localStorage.setItem('token', token);
@@ -49,6 +43,14 @@ export default new Vuex.Store({
  
       localStorage.setItem('user',JSON.stringify(user));
     },
-   
+    SET_QUOTES(state, quotes) {
+      state.quotes = quotes;
+    },
+    SET_CHARACTERS(state, characters) {
+      state.characters = characters;
+    },
+    SET_MOVIES(state, movies) {
+      state.movies = movies;
+    },
   }
 })

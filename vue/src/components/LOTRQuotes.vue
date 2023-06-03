@@ -1,5 +1,6 @@
 <template>
     <div>
+        <word-cloud :quotes="docs"></word-cloud>
        <!-- {{ docs}} -->
         <table>
             <tbody>
@@ -19,11 +20,15 @@
 
 
 import LOTRService from '../services/LOTRService.js'
+// import Wordcloud from '../components/Wordcloud.vue'
 
 
 export default {
 
     name: 'lotr-quotes',
+//     components: {
+//     Wordcloud,
+//   },
     data() {
         return {
             docs: []
